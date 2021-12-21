@@ -1,0 +1,400 @@
+@media screen and (max-width : 1150px){
+    .singleSortedProduct {
+        grid-template-columns: .8fr 2fr .8fr;
+        font-size: 14px;
+    }
+    .insideSortedProductInfo{
+        min-width: 330px;
+    }
+    :root{
+        --ul-height : 176px
+    }
+}
+@media screen and (max-width : 915px){
+    .logo img {
+        width: 160px;
+    }
+    header {
+        grid-template-columns: 1.3fr 1.8fr 1.5fr 1fr 1fr;
+    }
+}
+@media screen and (max-width : 840px){
+    .logo img {
+        width: 148px;
+    }
+}
+@media screen and (max-width : 768px){
+    :root{
+        --header-height : 51px !important;
+    }
+    .HomePage>img{
+        min-height: 206px !important;
+    }
+    header button {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width : 768px){
+    .insideProductPage{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width : 950px){
+    .insideSortedProductPrice {
+        min-width: 130px;
+    }
+    .singleSortedProduct{
+        font-size: 14px;
+    }
+    .insideSortedProductInfo{
+        min-width: 200px;
+        width: 250px;
+    }
+    .sortedProductImg img {
+        width: 85px;
+    }
+}
+/* for sorted product page start */
+
+
+
+/* make product page responsive for mobile */
+@media screen and (max-width : 768px){
+    .someWrong{
+        top: 55px;
+        left: 27%;
+        letter-spacing: .5px;
+    }
+    .singleSortedProduct {
+        font-size: 13px;
+    }
+    .sortingDiv {
+        display: none;
+        margin-top: 0px;
+    }
+    .sortedProductsDiv{
+        width: 100%;
+        margin-top: 1px;
+    }
+    .filterBar {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        top: 0px;
+        /* margin-top: 8px; */
+        box-shadow: 0px -5px 10px -6px grey;
+    }
+    .addToCartOverImg button{
+        display: block !important;
+        font-size: 14px !important;
+        width: 130px !important;
+        min-width: 120px;
+        transform: scale(.94);
+        top: -6px;
+    }
+    .sortingDiv hr{
+        width: 97%;
+    }
+    .result p{
+        margin-left: 10px;
+    }
+    .homePageProductInfo button {
+        width: 130px;
+        font-size: 14px !important;
+    }
+    header button:hover{
+        background-color: grey;
+        transform: scale(1.1);
+        color: white;
+    }
+}
+
+@media screen and (max-width : 480px){
+    .addToCartOverImg button{
+        top: -6px;
+    }
+    .singleSortedProduct {
+        grid-template-columns: .8fr 2fr;
+    }
+    .hightlights{
+        display: none;
+    }
+    .insideSortedProductPrice{
+        height: 58px;
+        width: 100%;
+    } 
+    .sortedProductPrice{
+        position: absolute;
+        top: 55px;
+        width: 35%;
+        /* right: 35%;  */
+        left: calc(19vw * 2);
+        height: 78px;
+    }
+    .insideSortedProductPrice > span:nth-of-type(1){
+        font-size: 1.4em;
+        margin-right: 6px;
+    }
+    .insideSortedProductPrice > span{
+        font-size: 1.3em;
+
+    }
+    .singleSortedProduct {
+        height: 210px;
+    }
+    :root {
+        --ul-height: 150px;
+    }
+    .dailyContentName{
+        font-size: 1.2em;
+    }
+    .dailyContentName button{
+        font-size: 0.9em;
+        width: 90px;
+        height: 29px;
+    }
+    .insideSortedProductPrice > p{
+        margin-bottom: 11px;
+        font-size: 22px;
+    }
+}
+@media screen and (max-width : 440px){
+    .sortedProductPrice{
+        left: calc(18vw * 2);
+    }
+}
+@media screen and (max-width : 400px){
+    .sortedProductPrice{
+        left: calc(17vw * 2);
+    }
+}
+@media screen and (min-width : 340px) and (max-width : 360px){
+    .sortedProductPrice{
+        left: calc(14.9vw * 2);
+    }
+}
+@media screen and (min-width : 360px) and (max-width : 400px){
+    .sortedProductPrice{
+        left: calc(16vw * 2);
+    }
+}
+/* for sorted product page end */
+@media screen and (max-width : 1025px){
+    .categoryItems {
+        right: 11vw;
+    }
+}
+@media screen and (max-width : 767px){
+    header{
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+    }
+    .logo{
+        justify-content: center;
+    }
+     .ohterNavItems , .profile{
+        display: none;
+    } 
+    .category{
+        position:unset;
+    }
+    .categoryItems{
+        left: auto;
+        right: 15vw;
+        width: 10em;
+    }
+    .dropDown{
+        display: none;
+        align-items: center;
+    }
+    .menu{
+        display: block;
+    }
+
+    .categoryIcon{
+        display: block;
+    }
+}
+
+@media screen and (max-width : 770px){
+    .emptyCart{
+        height: 36vh;
+        font-size: 1.3em;
+    }
+    .emptyCart img {
+        width: 105px;
+        margin-bottom: 4vh;
+    }
+    .emptyCart button {
+        font-size: 13.5px;
+        margin-top: 12px;
+        height: 30px;
+        width: 150px;
+    }
+}
+@media screen and (max-width : 768px){
+    .cart button span{
+        display: none;
+    }
+    header{
+        font-size: 15px;
+    }
+    .menuItems{
+        height: calc(100vh);
+    }
+    .menuIcon i{
+        font-size: 1.3em;
+    }
+    .sortingName button{
+        position: relative;
+        right: 0%;
+    }
+    .categoryItems {
+        top: calc(var(--header-height) - 10.5px);
+    }
+    .sortButton{
+        height: 40px;
+    }
+}
+
+@media screen and (min-width : 767px) and (max-width : 850px){
+    .sortingName{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width : 480px){
+    .singleHomePageProduct{
+        width: 10em;
+    }
+    .homePageProductInfo{
+        font-size: .9em;
+    }
+    .sortingName button{
+        position: relative;
+        right: 0%;
+    }
+    /* make are you sure responsive */
+    .areYouSure {
+        width: 95%;
+        height: 145px;
+        width: 75%;
+        height: 125px;
+    }
+    .doYouBtn button , .crossBtnh span , .doYou p{
+        font-size: 14px;
+    }
+    .doYou {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+/* profile page rewposdjsld */
+@media screen and (max-width : 768px){
+    main{
+        padding-top: 51px;
+    }
+    .profilePage {
+        width: 100%;
+        flex-direction: column;
+        top: calc(var(--header-height));
+        height: calc(100vh - var(--header-height));
+        font-size: 12px;
+        box-shadow: 0px 0px 10px -4px white;
+    }
+    .profilePic{
+        border-right: none;
+        width: 100%;
+        border-bottom: 1px solid grey;
+    }
+    .profilePic img {
+        width: 148px;
+        max-width: 160px;
+        top: 24%;
+    }
+    .profileInfoInside button{
+        left: 11px;
+        bottom: -90px;
+        background-color: var(--primary-color);
+        color: white;
+    }
+    .acctInfo {
+        padding-left: 13px;
+        background-color: white;
+        color: var(--primary-color);
+        box-shadow: 0px 2px 15px -8px bla
+    }
+    .acctInfo button{
+        background-color: white;
+        color: var(--primary-color);
+
+    }
+    .profileInfoInside p {
+        margin-left: 13px;
+    }
+    .acctInfo button{
+        right: 5.6vw;
+    }
+    .profileInfo{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .sortedProductImg img {
+        width: 73px !important;
+    }
+    .insideSortedProductInfo {
+        min-width: 195px;
+        width: 208px;
+    }
+    .insideSortedProductPrice {
+        min-width: 92px;
+        font-size: 10px;
+    }
+    :root{
+        --ul-height : 168px
+    }
+}
+@media screen and (max-width : 400px){
+    .sortedProductImg img {
+        width: 64px !important;
+    }
+}
+@media screen and (max-width: 480px){
+    .logo img {
+        width: 140px;
+    }
+}
+@media screen and (max-width : 650px){
+    .categoryItems{
+        right: 12vw;
+    }
+}
+@media screen and (max-width : 500px){
+    .categoryItems{
+        right: 10vw;
+    }
+}
+@media screen and (max-width : 400px){
+    .categoryItems{
+        right: 7vw;
+    }
+}
+@media screen and (max-width : 365px){
+    .categoryItems{
+        right: 5.5vw;
+    }
+}
+@media screen and (max-width : 365px){
+    .categoryItems{
+        right: 4vw;
+    }
+}
+@media screen and (max-width : 330px){
+    .categoryItems{
+        right: 2vw;
+    }
+}

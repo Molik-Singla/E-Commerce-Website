@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="responsive2.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- Roboto and reader Pro - Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500&display=swap"
+    rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/280833cb08.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="IMAGES/favIcon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="menuIcon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menuItems">
+        <button class="cancelMenu"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <p class="profileJS">Profile</p>
+        <hr>
+        <p class="homeBtnJS">Home</p>
+        <p class="aboutBtnJS2">About</p>
+        <p class="cartAtMenu">Cart</p>
+        <hr>
+        <p class="logInJS">Sign / Log in</p>
+      </div>
+    </div>
+
+    <div class="logo">
+      <img src="IMAGES/headerLogo.png" alt="">
+    </div>
+
+
+    <div class="ohterNavItems">
+      <button class="homeBtnJS">Home</button>
+      <button class="aboutBtnJS">About</button>
+    </div>
+
+    <div class="dropDown">
+      <div class="category">
+        <p>Category</p>
+        <i class="fas fa-sort-down"></i>
+      </div>
+      <div class="categoryItems">
+        <p class="appleJS">Apple</p>
+        <p class="vivoJS">Vivo</p>
+        <p class="oppoJS">Oppo</p>
+        <p class="redmiJS">Redmi</p>
+        <p class="samsungJS">Samsung</p>
+        <p class="allJS">All</p>
+      </div>
+    </div>
+
+    <div class="categoryIcon">
+      <i class="far fa-list-alt"></i>
+    </div>
+
+
+    <div class="cart">
+      <button><i class="fas fa-shopping-cart"></i><span>Cart</span></button>
+    </div>
+
+    <div class="profile">
+      <div class="insideProfile1">
+        <div>
+          <p>Molik...</p>
+          <i class="fas fa-sort-down"></i>
+        </div>
+        <div>
+          <i class="fas fa-sort-down"></i>
+          <button class="profileJS2">Profile</button>
+          <button class="logInJS">Sign/Log in</button>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+  <main>
+    <!-- inside sections areYouSure and profile (total 2 divs) comes which shows or overlap the other changable divs -->
+    <section>
+      <div class="areYouSure">
+        <div class="crossBtnh">
+          <span>Please do Login First !</span>
+          <button><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <div class="doYou">
+          <p>Do you want to Signup or Login ?</p>
+        </div>
+        <div class="doYouBtn">
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+
+      <div class="profilePage">
+        <div class="profilePic">
+          <img src="https://www.svgrepo.com/show/44183/male-user.svg" alt="">
+        </div>
+        <div class="profileInfo">
+          <p class="acctInfo"><span>Profile</span><button><i class="fa fa-times" aria-hidden="true"></i></button></p>
+          <div class="profileInfoInside">
+            <p class="manipulate1JS"></p>
+            <p class="manipulate2JS"></p>
+            <button class="logOutBtnJS">Log Out <i class="fas fa-sign-out-alt"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="HomePage">
+      <img src="https://media.istockphoto.com/photos/man-using-mobile-smart-phone-with-global-network-connection-and-picture-id1274394138?b=1&k=20&m=1274394138&s=170667a&w=0&h=DTMn7Vg-lHFiz3yuo1O1EUQYIYQ6Wx4RmQn0buuoOGs=" alt="">
+      <div class="homePageContent">
+        <div class="dailyContent">
+          <div class="dailyContentName">
+            <p>Deals of the Day (5) </p>
+          </div>
+          <div class="products dealsofTheDayJS">
+            <!-- content added through javascript -->
+          </div>
+        </div>
+
+        <div class="dailyContent">
+          <div class="dailyContentName">
+            <p>All Mobiles</p>
+            <button>More...</button>
+          </div>
+          <div class="products allMobilesJS">
+             <!-- content added through javascript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ProductsPage">
+      <div class="filterBar">
+        <div class="insideFilterBar">
+          <p>Sort By
+            <i class="fas fa-angle-down srt-1"></i>
+            <i class="fas fa-angle-up srt-2"></i>
+          </p>
+        </div>
+      </div>
+      <div class="insideProductPage">
+        <div class="sortingDiv">
+          <i class="fas fa-sort-up"></i>
+          <div class="sortingName">
+            <p><i class="fas fa-filter"></i>Filter</p>
+            <button>Clear All</button>
+          </div>
+
+          <hr id="marLess">
+          <div class="sortingChoices">
+            <div class="sortByPrice">
+              <div class="insideSortByPrice1">
+                <p>Price</p>
+              </div>
+              <div class="insideSortByPrice2">
+                <select name="minPrice" id="minPrice">
+                  <option value="5000">&#xf156; 5000</option>  
+                  <option value="8000">&#xf156; 8000</option>
+                  <option value="10000">&#xf156; 10000</option>
+                  <option value="12000">&#xf156; 12000</option>
+                  <option value='15000'>&#xf156; 15000</option>
+                </select>
+
+                <p>to</p>
+
+                <select name="maxPrice" id="minPrice">
+                  <option value="16000">&#xf156; 16000</option>
+                  <option value="20000">&#xf156; 20000</option>
+                  <option value="30000">&#xf156; 30000</option>
+                  <option value="50000">&#xf156; 50000</option>
+                  <option value="90000">&#xf156; 90000</option>
+                  <option value="160000">&#xf156; 160000</option>
+                </select>
+              </div>
+            </div>
+
+
+            <hr>
+            <div class="sortByRating">
+              <div class="insideSortByRating1">
+                <p>Ratings</p>
+              </div>
+              <div class="insideSortByRating2">
+                <label for="rate5"><input type="radio" name="sortByRating" id="rate5" value="5"> 5 only</label>
+                <label for="rate4"><input type="radio" name="sortByRating" id="rate4" value="4"> 4 & above</label>
+
+                <label for="rate3"><input type="radio" name="sortByRating" id="rate3" value="3"> 3 & above</label>
+
+                <label for="rate2"><input type="radio" name="sortByRating" id="rate2" value="2"> 2 & above</label>
+
+                <label for="rate1"> <input checked type="radio" name="sortByRating" id="rate1" value="1"> 1 &
+                  above</label>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="sortButton">
+            <button>Sort</button>
+          </div>
+        </div>
+
+        <div class="sortedProductsDiv">
+          <!-- single single products are inserted througn javascript -->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="SingleProductItself">
+      <p id="IDNUMBER"></p>
+      <button class="ael-1"><i class="fas fa-arrow-left"></i></button>
+      <div class="itselfImg">
+        <div class="itImg">
+          <img src="https://www.linkpicture.com/q/img-4.jpeg" alt="">
+        </div>
+
+        <div class="itselfButtons">
+          <button>Buy Now</button>
+          <button class="aTCItself"><i class="fas fa-shopping-cart" aria-hidden="true"></i>Add to Cart</button>
+        </div>
+
+      </div>
+      <div class="itselfInfo">
+        <div class="insideItselfInfo">
+          <p>APPLE iPhone 12 (Black, 64 GB)</p>
+          <div class="rateStar">
+
+          </div>
+          <p class="price1"><i class="fa fa-rupee "></i> 30000</p>
+          <p class="price2"><i class="fa fa-rupee "></i> 27000</p>
+          <span class="disPrice">20% off</span>
+          <p>you save : <i class="fa fa-rupee "></i>3000</p>
+          <hr>
+          <table>
+            <tr>
+              <td>Brand : </td>
+              <td>Apple</td>
+            </tr>
+            <tr>
+              <td>Inbox Charger : </td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Color : </td>
+              <td>Default</td>
+            </tr>
+          </table>
+          <hr>
+          <ul class="itselfUl">
+            <p>About this item : </p>
+            <li>64 GB ROM</li>
+            <li>11.94 cm (4.7 inch) Retina HD Display</li>
+            <li>12MP Rear Camera | 7MP Front Camera</li>
+            <li>Fast Charge Capable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="CartItself">
+      <div class="myCart">
+        <p class="myCartP">My Shopping Cart</p>
+        <hr>
+        <div class="cartItems">
+
+          <div class="emptyCart">
+            <img src="https://www.linkpicture.com/q/emptyCart.png" alt="">
+            <P>Your Cart is Empty !</P>
+            <button>Continue Shopping</button>
+          </div>
+          <!-- code generated bt javascript here -->
+
+        </div>
+      </div>
+      <div class="totalPrice">
+        <p class="myCartP myCartp2">Price Detail</p>
+        <hr>
+        <table>
+          <tr>
+            <td>Items</td>
+            <td class="leftSpace placeItemJS">2</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td class="leftSpace placeTotalJS"><i class="fa fa-rupee "></i>30000</td>
+          </tr>
+          <tr>
+            <td>Discount</td>
+
+            <td class="leftSpace placeDiscountJS">-<i class="fa fa-rupee"></i>3000</td>
+          </tr>
+          <tr class="amTr">
+            <td>Total Amount</td>
+            <td class="leftSpace placePriceToPayJS"><i class="fa fa-rupee "></i>27000</td>
+          </tr>
+        </table>
+        <button class="placeOrder">Place Order</button>
+      </div>
+    </div>
+
+    <div class="LoginPage">
+      <div class="insideLoginPage">
+        <div class="signLoginBtn">
+          <button>Signup</button>
+          <button>Login</button>
+        </div>
+        <p class="pleaseLogin">Please do login Once !</p>
+        <hr>
+        <p class="someWrong">Something Wrong !</p>
+        <div class="signInputs">
+          <input type="email" name = "email" required placeholder="Enter your Email ">
+          <input type="text" placeholder="Create Pasword">
+          <input type="text" placeholder="Confirm Password">
+        </div>
+        <div class="signInputs loginInputs">
+          <input type="email" placeholder="Enter your Email ">
+          <input type="text" placeholder="Confirm Password">
+        </div>
+        <div class="signLoginBtns">
+          <button>Sign up</button>
+        </div>
+        <hr class="belowSignUpBtnHr">
+        <div class="signLoginBtns signLoginBtns2">
+          <button>Guest</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="Information.js"></script>
+  <script src="SmallWorkingButtons.js"></script>
+  <script src="Production.js"></script>
+  <script src="MainLogic.js"></script>
+  <script src="changes.js"></script>
+</body>
+
+</html>
