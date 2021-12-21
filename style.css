@@ -37,6 +37,7 @@ header button{
     background-color: #191919;
     color: white;
     transition: all .2s;
+    border: 2px solid white;
 }
 header button:hover{
     background-color: grey;
@@ -52,7 +53,16 @@ header button:hover{
 .insideProfile1:hover{
     background-color: grey !important;
     color: white !important;
-    border: none;
+}
+#setIt{
+    border: 2px solid white;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px !important;
 }
 .menu{
     position: relative;
@@ -169,6 +179,7 @@ header button:hover{
     height: 30px;
     transition: all .2s;
     border-radius: 50px;
+    border: 2px solid white;
 }
 .category:hover{
     background-color: grey !important;
@@ -225,7 +236,7 @@ header button:hover{
     height: 31px;
     width: 88px;
     border-radius: 50px;
-    min-width: 50px;
+    /* min-width: 50px; */
 }
 .cart button i{
     margin-right: 9px;

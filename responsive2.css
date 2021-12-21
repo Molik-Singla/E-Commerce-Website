@@ -201,7 +201,9 @@
         font-size: 19px;
     }
     .cart button{
-        width: 50px !important;
+        width: 45px !important;
+        border-radius: 50%;
+        height: 41px;
     }
     .cart button i{
         margin-right:0px;
