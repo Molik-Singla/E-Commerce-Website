@@ -1781,14 +1781,13 @@ footer{
     width: 100vw;
     height: 30px;
     margin-top: 20px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
     display: flex;
-    /* justify-content: center; */
     align-items:center;
     display: none;
 }
 footer p{
-    color: white;
+    color: white !important;
     margin-left: 2vw;
 }
 body{

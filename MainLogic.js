@@ -1,11 +1,20 @@
 let cancelProfilePage = document.querySelector(".acctInfo button")
 let cancelBtn = document.querySelector(".crossBtnh button i")
+let areYouSureDiv = document.querySelector(".areYouSure")
 
 var idForProductItself = ""
 var whichPage = []
 let buyNowBtn = document.querySelector(".itselfButtons button:nth-of-type(1)")
 buyNowBtn.addEventListener("click", () => {
-    buyNowBtn.textContent = "Thank You :)"
+    if(localStorage.getItem("isLogin")){
+        buyNowBtn.textContent = "Thank You :)"
+        setTimeout(() => {
+            buyNowBtn.textContent = "But Now"
+        } , 3000)
+    }
+    else{
+        areYouSureDiv.style.display = "flex"
+    }
 })
 //  #1 : generate addToCart , (set) removeBtns for SingleProductItself  
 function removalTemporary(productSet) {
@@ -270,7 +279,6 @@ function ifCartIsEmpty() {
     placeDiscount.innerHTML = `<i class="fa fa-rupee"></i> 0`
     priceToPay.innerHTML = `<i class="fa fa-rupee"></i> 0`
     return true
-
 }
 
 function removeFromaddToCartTempVar(id) {
@@ -356,7 +364,7 @@ function funcForAddToCartHome(oneAdd, evt) {
 
 let yesBtn = document.querySelector(".doYouBtn button:nth-of-type(1)")
 let noBtn = document.querySelector(".doYouBtn button:nth-of-type(2)")
-let areYouSureDiv = document.querySelector(".areYouSure")
+
 
 function removeLaterHomeFunc(oneAdd, evt) {
     evt.stopPropagation()
@@ -1301,7 +1309,21 @@ aboutBtn1.addEventListener("click", aboutUSFunc)
 
 let placeOrderBtn = document.querySelector(".placeOrder")
 placeOrderBtn.addEventListener("click", () => {
-    placeOrderBtn.textContent = "Thank You :)"
+    if (localStorage.getItem("isLogin")) {
+        if (document.querySelector(".emptyCart").style.display != "flex") {
+            placeOrderBtn.textContent = "Thank You :)"
+            setTimeout(() => {
+                placeOrderBtn.textContent = "Place Order"
+            }, 3000)
+        }
+        else{
+            switchToOnOff(pageHome, pageProduct, pageProductItself, pageCart, loginSigninPage)
+        }
+    }
+    else {
+        console.log("Its Empt");
+        areYouSureDiv.style.display = "flex"
+    }
 })
 
 // guest login button

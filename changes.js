@@ -74,7 +74,10 @@ pageProductItself.addEventListener("click", () => {
     wannaOffProfileName()
 })
 pageCart.addEventListener("click", () => {
-    wannaDisableAll()
+    // wannaDisableAll
+    wannaOffCategory()
+    wannaOffProfileName()
+    wannaOffProfilePage()
 })
 pageLogin.addEventListener("click", () => {
     wannaDisableAll()
