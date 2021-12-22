@@ -43,13 +43,19 @@ categoryBtn.addEventListener("click", () => {
 clickedDiv.addEventListener("mouseenter", () => {
     wannaOffAreYouSureDiv()
     wannaOffCategory()
+    wannaOffProfilePage()
 })
 for (let btns of homePageBtn) {
     btns.addEventListener("click", () => {
         wannaDisableAll()
+        let dropd = document.querySelector(".dropDown")
+        if (window.getComputedStyle(dropd).display !== "none") {
+            dropd.style.display = "none"
+            document.querySelector(".logo").style.display = "flex"
+        }
     })
 }
-connectCartBtn.addEventListener("click" , () => {
+connectCartBtn.addEventListener("click", () => {
     wannaDisableAll()
 })
 // pageHome, pageProduct, pageProductItself, pageCart, pageLogin
@@ -114,10 +120,33 @@ pageCart.addEventListener("touchstart", () => {
     }
 })
 pageLogin.addEventListener("touchstart", () => {
-    wannaOffCategory()
+    wannaDisableAll()
+    let dropd = document.querySelector(".dropDown")
+    if (window.getComputedStyle(dropd).display !== "none") {
+        dropd.style.display = "none"
+        document.querySelector(".logo").style.display = "flex"
+    }
 })
-
+for (let i = 0; i < 2; i++) {
+    loginSinginPageBtn[i].addEventListener("touchstart", () => {
+        wannaDisableAll()
+        let dropd = document.querySelector(".dropDown")
+        if (window.getComputedStyle(dropd).display !== "none") {
+            dropd.style.display = "none"
+            document.querySelector(".logo").style.display = "flex"
+        }
+    })
+}
 menuIcon.addEventListener("touchend", () => {
+    if (document.querySelector(".category").textContent.includes("Category")) {
+        setTimeout(() => {
+            let dropd = document.querySelector(".dropDown")
+            if (window.getComputedStyle(dropd).display !== "none") {
+                dropd.style.display = "none"
+                document.querySelector(".logo").style.display = "flex"
+            }
+        }, 320)
+    }
     wannaDisableAll()
 })
 

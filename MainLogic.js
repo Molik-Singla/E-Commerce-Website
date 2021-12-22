@@ -165,7 +165,6 @@ for (let single of singleProductFromHomePage) {
 }
 
 function sortedToItselfDiv(singleSortedProduct) {
-    // console.log(singleSortedProduct);
     for (let single of singleSortedProduct) {
         single.addEventListener("click", function () {
             let getIdNumber = single.querySelector("#IDNUMBER").textContent;
@@ -279,7 +278,6 @@ function removeFromaddToCartTempVar(id) {
     if (index >= 0) {
         addToCartTemp.splice(id, 1)
     }
-    console.log("After : ", addToCartTemp);
 }
 var removeItem;
 let ct = 0;
@@ -446,19 +444,15 @@ function funcForAddToCartProductPage(oneAdd, evt) {
                     let newOne = localStorage.getItem("ProductSet2")
 
                     if (newOne.includes(`,${topMost.children[0].textContent}`)) {
-                        console.log("in 1");
                         newOne = newOne.replace(`,${topMost.children[0].textContent}`, "")
                     }
                     else if (newOne.includes(`${topMost.children[0].textContent},`)) {
-                        console.log("in 2");
                         newOne = newOne.replace(`${topMost.children[0].textContent},`, "")
                     }
                     else if (newOne.includes(`,${topMost.children[0].textContent},`)) {
-                        console.log("in 3");
                         newOne = newOne.replace(`,${topMost.children[0].textContent},`, ",")
                     }
                     else {
-                        console.log("else");
                         localStorage.removeItem("CartProducts")
                         newOne = newOne.replace(topMost.children[0].textContent, "")
                     }
@@ -998,7 +992,6 @@ signLoginBtn.addEventListener("click", function () {
 
         if (localStorage.getItem("Sign up")) {
             let fromSign = localStorage.getItem("Sign up").split(",")
-            console.log(fromSign);
 
             if (logEmail.value != fromSign[0] && logPass.value != fromSign[1]) {
                 onOffSomething("Email & Password does not Match !", "block", "19%")
@@ -1180,7 +1173,6 @@ cancelProfilePage.addEventListener("click", function () {
 // })
 // logout btn in profile
 logOutInProfile.addEventListener("click", function () {
-    console.log("log out clicked");
     if (localStorage.getItem("isLogin") == "true") {
         localStorage.clear()
         location.reload()
@@ -1189,7 +1181,6 @@ logOutInProfile.addEventListener("click", function () {
     }
     else {
         profilePageDiv.style.display = "none"
-        console.log("Display None");
         offFilter()
         areYouSureDiv.style.display = "flex"
         wannaOffCategory()
@@ -1275,7 +1266,6 @@ for (let home of homePageBtn)
 
 // sets backBtn in SingleProductItself div to go either on HomePage or on ProductPage
 backBtnOnProductItself.addEventListener("click", function () {
-    console.log(whichPage[whichPage.length - 2], whichBtnClicked);
     if (whichPage[whichPage.length - 2] && whichPage[whichPage.length - 2] == "HomePage") {
         switchToOnOff(pageHome, pageProduct, pageProductItself, pageCart, loginSigninPage)
     } else if (whichPage[whichPage.length - 2] && whichPage[whichPage.length - 2] == "ProductsPage") {
