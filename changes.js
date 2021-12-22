@@ -1,83 +1,119 @@
 // for width >= 768px
 let mainVariable = [
-    ".categoryItems",  ".profilePage",  ".areYouSure",  ".insideProfile1 div:nth-of-type(2)"
+    ".categoryItems", ".profilePage", ".areYouSure", ".insideProfile1 div:nth-of-type(2)"
 ]
 
-function wannaOffCategory(){
+function wannaOffCategory() {
     let a1 = document.querySelector(mainVariable[0])
-    if(window.getComputedStyle(a1).opacity  !== "0"){
+    if (window.getComputedStyle(a1).opacity !== "0") {
         a1.style.opacity = 0
         categoryBtn.click()
     }
 }
-function wannaOffProfilePage(){
+function wannaOffProfilePage() {
     let a1 = document.querySelector(mainVariable[1])
-    if(window.getComputedStyle(a1).display != "none"){
+    if (window.getComputedStyle(a1).display != "none") {
         cancelProfilePage.click()
     }
 }
-function wannaOffAreYouSureDiv(){
+function wannaOffAreYouSureDiv() {
     let a1 = document.querySelector(mainVariable[2])
-    if(window.getComputedStyle(a1).display != "none"){
+    if (window.getComputedStyle(a1).display != "none") {
         cancelBtn.click()
     }
 }
-function wannaOffProfileName(){
+function wannaOffProfileName() {
     let a1 = document.querySelector(mainVariable[3])
-    if(window.getComputedStyle(a1).display != "none"){
+    if (window.getComputedStyle(a1).display != "none") {
         clickedDiv.click()
     }
 }
-function wannaDisableAll(){
+function wannaDisableAll() {
     wannaOffCategory()
     wannaOffProfilePage()
     wannaOffAreYouSureDiv()
     wannaOffProfileName()
 }
-categoryBtn.addEventListener("click" , () => {
+categoryBtn.addEventListener("click", () => {
     wannaOffAreYouSureDiv()
     wannaOffProfilePage()
     wannaOffProfileName()
 })
-clickedDiv.addEventListener("mouseenter" , () => {
+clickedDiv.addEventListener("mouseenter", () => {
     wannaOffAreYouSureDiv()
     wannaOffCategory()
 })
+for (let btns of homePageBtn) {
+    btns.addEventListener("click", () => {
+        wannaDisableAll()
+    })
+}
 // pageHome, pageProduct, pageProductItself, pageCart, pageLogin
-pageHome.addEventListener("click" , () => {
+pageHome.addEventListener("click", () => {
     wannaDisableAll()
 })
-pageProduct.addEventListener("click" , () => {
+pageProduct.addEventListener("click", () => {
     wannaDisableAll()
 })
-pageProductItself.addEventListener("click" , () => {
+pageProductItself.addEventListener("click", () => {
     wannaOffProfilePage()
     wannaOffProfileName()
 })
-pageCart.addEventListener("click" , () => {
+pageCart.addEventListener("click", () => {
     wannaDisableAll()
 })
-pageLogin.addEventListener("click" , () => {
+pageLogin.addEventListener("click", () => {
     wannaDisableAll()
 })
-pageHome.addEventListener("mouseenter" , () => {
+pageHome.addEventListener("mouseenter", () => {
     wannaOffCategory()
     wannaOffProfileName()
 })
-pageProduct.addEventListener("mouseenter" , () => {
+pageProduct.addEventListener("mouseenter", () => {
     wannaOffProfileName()
 })
-pageProductItself.addEventListener("mouseenter" , () => {
+pageProductItself.addEventListener("mouseenter", () => {
     wannaOffCategory()
     wannaOffProfileName()
 })
-pageCart.addEventListener("mouseenter" , () => {
+pageCart.addEventListener("mouseenter", () => {
     wannaOffCategory()
     wannaOffProfileName()
 })
-pageLogin.addEventListener("mouseenter" , () => {
+pageLogin.addEventListener("mouseenter", () => {
     wannaOffCategory()
     wannaOffProfileName()
 })
 
+
 // for width <= 768px
+pageHome.addEventListener("touchstart", () => {
+    wannaOffCategory()
+    let dropd = document.querySelector(".dropDown")
+    if (window.getComputedStyle(dropd).display !== "none") {
+        dropd.style.display = "none"
+        document.querySelector(".logo").style.display = "flex"
+    }
+})
+pageProduct.addEventListener("touchstart", () => {
+    wannaOffProfileName()
+})
+pageProductItself.addEventListener("touchstart", () => {
+    wannaOffCategory()
+})
+pageCart.addEventListener("touchstart", () => {
+    wannaOffCategory()
+    let dropd = document.querySelector(".dropDown")
+    if (window.getComputedStyle(dropd).display !== "none") {
+        dropd.style.display = "none"
+        document.querySelector(".logo").style.display = "flex"
+    }
+})
+pageLogin.addEventListener("touchstart", () => {
+    wannaOffCategory()
+})
+
+// 
+menuIcon.addEventListener("touchend", () => {
+    wannaDisableAll()
+})

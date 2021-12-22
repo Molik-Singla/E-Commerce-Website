@@ -894,7 +894,7 @@ function updatePlaceOrderValus() {
 }
 
 let someThing = document.querySelector(".someWrong")
-function onOffSomething(txt, disp = "block", left = "28%") {
+function onOffSomething(txt, disp = "block", left = "27%") {
     someThing.style.display = disp
     someThing.style.left = left
     someThing.textContent = txt
@@ -962,6 +962,10 @@ signLoginBtn.addEventListener("click", function () {
         }
         else if (!getPass.value) {
             onOffSomething("Please enter Password")
+            flag = 1
+        }
+        else if(getPass.value.length <= 7){
+            onOffSomething("Please Length must be Greater than 7" , "block" , "16%")
             flag = 1
         }
         else if (!getConfirmPass.value) {
@@ -1089,7 +1093,7 @@ function profileFunc() {
     let ac = document.querySelector(".acctInfo>span")
     ac.textContent = "Profile"
     let got = localStorage.getItem("Sign up")
-    if (got) {
+    if (got && localStorage.getItem("isLogin")) {
         emailInsideProfile.textContent = `Email : ${got.split(",")[0]}`
         passwordInsideProfile.textContent = `Password : ${got.split(",")[1]}`
     } else {
@@ -1110,6 +1114,7 @@ function profileFunc() {
 }
 profileBtn.addEventListener("click", () => {
     profileFunc()
+
 })
 profileBtn1.addEventListener("click", () => {
     profileFunc()
@@ -1135,7 +1140,6 @@ cancelProfilePage.addEventListener("click", function () {
     }
     let a2 = document.querySelector(".insideProfile1")
     offEffect(a2)
-
 })
 // profilePageDiv.addEventListener("mouseleave", () => {
 //     backBtnOnProductItself.style.visibility = "visible"

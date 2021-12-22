@@ -51,6 +51,9 @@ function switchToOnOff(on, ...off) {
         offEffect(cata)
         onEffect(profDiv)
     }
+    else if(on.className === "SingleProductItself"){
+        offEffect(headerBtns[1])
+    }
     if(on.className != "ProductsPage"){
         cataP.textContent = "Category"
     }

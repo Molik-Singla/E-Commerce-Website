@@ -252,7 +252,7 @@
         right: 0%;
     }
     .categoryItems {
-        top: calc(var(--header-height) - 10.5px);
+        top: calc(var(--header-height) - 8.1px);
     }
     .sortButton{
         height: 40px;

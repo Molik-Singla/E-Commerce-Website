@@ -26,12 +26,6 @@ categoryBtn.addEventListener("click", () => {
     toDisplayInOutDropDown()
 })
 
-
-// function dropDownClose(){
-//     cataItems.style.visibility = "hidden"
-//     categoryIcon.style.transform = "rotate(0deg)"
-//     cataItems.style.opacity = "0"
-// }
 // 11111111111111111 drop down ends
 
 // 55555555555555555 sort by arrow strt 
@@ -92,12 +86,9 @@ for(let single of singleSingleMenuItem){
 // 22222222222222222  menu ends
 
 // 3333333333333333   cetagory enable for mobiles
-let inside = false
 let cataIcon = document.querySelector(".categoryIcon")
 
 cataIcon.addEventListener("click", function () {
-    inside = true
-
     if (document.querySelector(".logo").style.display == "none") {
         document.querySelector(".logo").style.display = "flex"
         document.querySelector(".dropDown").style.display = "none"
