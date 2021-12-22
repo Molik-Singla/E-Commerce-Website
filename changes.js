@@ -1,3 +1,4 @@
+// This Page Contains when some dropdown or button is open then click or touch or hover on ohter button or space ( closes opened dropdown or div)
 // for width >= 768px
 let mainVariable = [
     ".categoryItems", ".profilePage", ".areYouSure", ".insideProfile1 div:nth-of-type(2)"
@@ -116,7 +117,8 @@ pageLogin.addEventListener("touchstart", () => {
     wannaOffCategory()
 })
 
-// 
 menuIcon.addEventListener("touchend", () => {
     wannaDisableAll()
 })
+
+// END...

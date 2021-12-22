@@ -235,6 +235,9 @@
     }
 }
 @media screen and (max-width : 768px){
+    .signLoginBtns2 button {
+        background-color: #F7CA00;
+    }
     .cart button span{
         display: none;
     }

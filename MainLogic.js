@@ -704,7 +704,7 @@ allBtn.addEventListener("click", function () {
     ctAgain = 0
     cataP.textContent = "All Phones"
     disableCataItems()
-    window.scrollTo(0 , 0)
+    window.scrollTo(0, 0)
 })
 let moreInDailyContent = document.querySelector(".dailyContentName button")
 
@@ -732,7 +732,7 @@ moreInDailyContent.addEventListener("click", function () {
     ctAgain = 0
     cataP.textContent = "All Phones"
     disableCataItems()
-    window.scrollTo(0 , 0)
+    window.scrollTo(0, 0)
 })
 
 // below : sorting logic sets according to user put /selects values
@@ -1021,18 +1021,21 @@ signLoginBtn.addEventListener("click", function () {
                     setTimeout(() => {
                         updateNameOfUser()
                         localStorage.setItem("isLogin", "true")
-                        switchToOnOff(pageHome, pageProduct, pageProductItself, pageCart, loginSigninPage)
-                        for (let oneAdd of homePageAddToCart) {
-                            oneAdd.addEventListener("click", funcForAddToCartHome.bind(null, oneAdd))
-                        }
-                        getEmail = allInput[0].value = ""
-                        getPass = allInput[1].value = ""
-                        getConfirmPass = allInput[2].value = ""
+                        // switchToOnOff(pageHome, pageProduct, pageProductItself, pageCart, loginSigninPage)
+                        // for (let oneAdd of homePageAddToCart) {
+                        //     oneAdd.addEventListener("click", funcForAddToCartHome.bind(null, oneAdd))
+                        // }
+                        // getEmail = allInput[0].value = ""
+                        // getPass = allInput[1].value = ""
+                        // getConfirmPass = allInput[2].value = ""
 
-                        logEmail = allInput[3].value = ""
-                        logPass = allInput[4].value = ""
-                        signLoginBtn.textContent = "Log in"
-                        document.querySelector(".pleaseLogin").style.display = "none"
+                        // logEmail = allInput[3].value = ""
+                        // logPass = allInput[4].value = ""
+                        // signLoginBtn.textContent = "Log in"
+                        // document.querySelector(".pleaseLogin").style.display = "none"
+                        localStorage.removeItem("ProductSet1")
+                        localStorage.removeItem("ProductSet2")
+                        location.reload()
                     }, 1600)
                 }, 6000)
             }
@@ -1202,7 +1205,7 @@ abd.addEventListener("click", (evt) => {
     menuItems.classList.add("slide-out-left")
     setTimeout(() => {
         menuItems.style.display = "none"
-    }, 320);
+    }, 220);
 })
 
 // update many values and items when page is loaded 
@@ -1326,18 +1329,21 @@ aboutBtn.addEventListener("click", () => {
 })
 aboutBtn1.addEventListener("click", aboutUSFunc)
 
-if (window.innerWidth <= 767) {
-    let imageChange = document.querySelector(".HomePage>img")
-    imageChange.style.src = "mobileWall.jpeg"
-} else {
-    let imageChange = document.querySelector(".HomePage>img")
-    imageChange.style.src = "pcWall.jpeg"
-}
-
-document.querySelector(".SingleProductItself").style.height = `${window.innerHeight}px !important`
-
-
 let placeOrderBtn = document.querySelector(".placeOrder")
 placeOrderBtn.addEventListener("click", () => {
     placeOrderBtn.textContent = "Thank You :)"
 })
+
+// guest login button
+let guestBtn = document.querySelector(".guestJS")
+guestBtn.addEventListener("click", () => {
+    loginInputsDisplay()
+    let bothInputs = document.querySelectorAll(".loginInputs input")
+    let varies = Math.random() * 100 + 100
+    bothInputs[0].value = "Guest" + `${parseInt(varies)}` + "@gmail.com"
+
+    bothInputs[1].value = parseInt(Math.random() * 10000000 + 10000000)
+    localStorage.setItem("Sign up", `${bothInputs[0].value},${bothInputs[1].value},${bothInputs[1].value}`)
+})
+
+document.querySelector(".SingleProductItself").style.height = `${window.innerHeight}px !important`
