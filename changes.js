@@ -48,6 +48,9 @@ for (let btns of homePageBtn) {
         wannaDisableAll()
     })
 }
+connectCartBtn.addEventListener("click" , () => {
+    wannaDisableAll()
+})
 // pageHome, pageProduct, pageProductItself, pageCart, pageLogin
 pageHome.addEventListener("click", () => {
     wannaDisableAll()

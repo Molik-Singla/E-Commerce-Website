@@ -34,6 +34,7 @@ function switchToOnOff(on, ...off) {
         offEffect(headerBtns[2])
         offEffect(cata)
         offEffect(profDiv)
+        window.scrollTo(0 , 0)
     }
     else if(on.className === "ProductsPage"){
         let cataP = document.querySelector(".category>p")
@@ -53,6 +54,7 @@ function switchToOnOff(on, ...off) {
     }
     else if(on.className === "SingleProductItself"){
         offEffect(headerBtns[1])
+        window.scrollTo(0 , 0)
     }
     if(on.className != "ProductsPage"){
         cataP.textContent = "Category"

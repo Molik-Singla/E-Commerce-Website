@@ -1,10 +1,12 @@
 let cancelProfilePage = document.querySelector(".acctInfo button")
 let cancelBtn = document.querySelector(".crossBtnh button i")
 
-
-
 var idForProductItself = ""
 var whichPage = []
+let buyNowBtn = document.querySelector(".itselfButtons button:nth-of-type(1)")
+buyNowBtn.addEventListener("click", () => {
+    buyNowBtn.textContent = "Thank You :)"
+})
 //  #1 : generate addToCart , (set) removeBtns for SingleProductItself  
 function removalTemporary(productSet) {
     document.querySelector(".emptyCart").style.display = "none"
@@ -103,6 +105,8 @@ function changeAllInformationOfProductItself([productNameToFind, id]) {
     let tableDataTD = document.querySelector("td:nth-of-type(2)")
     let extractName = productName[productNameToFind][id].split(" ")[0]
     tableDataTD.textContent = extractName[0] + extractName.slice(1).toLowerCase()
+
+    buyNowBtn.textContent = "Buy Now"
 }
 let atc = document.querySelector(".aTCItself")
 atc.addEventListener("click", function () {
@@ -631,31 +635,35 @@ appleBtn.addEventListener("click", function () {
     clearAllFunctionClicked()
     cataP.textContent = "Apple"
     disableCataItems()
-    console.log("Calling...");
+    window.scrollTo(0, 0)
 })
 vivoBtn.addEventListener("click", function () {
     allBrandInformation("vivo")
     clearAllFunctionClicked()
     cataP.textContent = "Vivo"
     disableCataItems()
+    window.scrollTo(0, 0)
 })
 oppoBtn.addEventListener("click", function () {
     allBrandInformation("oppo")
     clearAllFunctionClicked()
     cataP.textContent = "Oppo"
     disableCataItems()
+    window.scrollTo(0, 0)
 })
 redmiBtn.addEventListener("click", function () {
     allBrandInformation("redmi")
     clearAllFunctionClicked()
     cataP.textContent = "Redmi"
     disableCataItems()
+    window.scrollTo(0, 0)
 })
 samsungBtn.addEventListener("click", function () {
     allBrandInformation("samsung")
     clearAllFunctionClicked()
     cataP.textContent = "Samsung"
     disableCataItems()
+    window.scrollTo(0, 0)
 })
 let cout = 0
 function generatorForAllPhones(brand) {
@@ -696,6 +704,7 @@ allBtn.addEventListener("click", function () {
     ctAgain = 0
     cataP.textContent = "All Phones"
     disableCataItems()
+    window.scrollTo(0 , 0)
 })
 let moreInDailyContent = document.querySelector(".dailyContentName button")
 
@@ -723,6 +732,7 @@ moreInDailyContent.addEventListener("click", function () {
     ctAgain = 0
     cataP.textContent = "All Phones"
     disableCataItems()
+    window.scrollTo(0 , 0)
 })
 
 // below : sorting logic sets according to user put /selects values
@@ -964,8 +974,8 @@ signLoginBtn.addEventListener("click", function () {
             onOffSomething("Please enter Password")
             flag = 1
         }
-        else if(getPass.value.length <= 7){
-            onOffSomething("Please Length must be Greater than 7" , "block" , "16%")
+        else if (getPass.value.length <= 7) {
+            onOffSomething("Please Length must be Greater than 7", "block", "16%")
             flag = 1
         }
         else if (!getConfirmPass.value) {
@@ -1026,6 +1036,9 @@ signLoginBtn.addEventListener("click", function () {
                     }, 1600)
                 }, 6000)
             }
+        }
+        else {
+            onOffSomething("Please do Signup First !!", "block", "26%")
         }
     }
 })
@@ -1186,7 +1199,10 @@ logOutInProfile.addEventListener("click", function () {
 let abd = document.querySelector(".cancelMenu")
 abd.addEventListener("click", (evt) => {
     evt.stopPropagation()
-    menuItems.style.display = "none"
+    menuItems.classList.add("slide-out-left")
+    setTimeout(() => {
+        menuItems.style.display = "none"
+    }, 320);
 })
 
 // update many values and items when page is loaded 
@@ -1321,3 +1337,7 @@ if (window.innerWidth <= 767) {
 document.querySelector(".SingleProductItself").style.height = `${window.innerHeight}px !important`
 
 
+let placeOrderBtn = document.querySelector(".placeOrder")
+placeOrderBtn.addEventListener("click", () => {
+    placeOrderBtn.textContent = "Thank You :)"
+})

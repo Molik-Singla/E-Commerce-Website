@@ -70,10 +70,12 @@ let menuItems = document.querySelector(".menuItems")
 
 menuIcon.addEventListener("click", () => {
     if (window.getComputedStyle(menuItems).display  == "block"){
+        menuItems.classList.remove("slide-out-left")
         menuItems.style.display = "none"   
     }
     else {
         menuItems.style.display = "block"
+        menuItems.classList.remove("slide-out-left")
     }
 })
 
