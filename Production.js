@@ -28,6 +28,7 @@ function switchToOnOff(on, ...off) {
         offEffect(headerBtns[3])
         offEffect(cata)
         offEffect(profDiv)
+        document.querySelector("footer").style.display = "flex"
     }
     else if(on.className === "CartItself"){
         onEffect(headerBtns[3])
@@ -36,6 +37,7 @@ function switchToOnOff(on, ...off) {
         offEffect(cata)
         offEffect(profDiv)
         window.scrollTo(0 , 0)
+        document.querySelector("footer").style.display = "none"
     }
     else if(on.className === "ProductsPage"){
         // cataP.textContent = "Category"
@@ -44,6 +46,7 @@ function switchToOnOff(on, ...off) {
         offEffect(headerBtns[2])
         offEffect(headerBtns[3])
         offEffect(profDiv)
+        document.querySelector("footer").style.display = "none"
     }
     else if(on.className === "LoginPage"){
         offEffect(headerBtns[1])
@@ -51,10 +54,12 @@ function switchToOnOff(on, ...off) {
         offEffect(headerBtns[3])
         offEffect(cata)
         onEffect(profDiv)
+        document.querySelector("footer").style.display = "none"
     }
     else if(on.className === "SingleProductItself"){
         offEffect(headerBtns[1])
         window.scrollTo(0 , 0)
+        document.querySelector("footer").style.display = "none"
     }
     if(on.className != "ProductsPage"){
         cataP.textContent = "Category"

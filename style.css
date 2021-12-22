@@ -1776,3 +1776,21 @@ ul li{
     }
   }
   
+
+footer{
+    width: 100vw;
+    height: 30px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    display: flex;
+    /* justify-content: center; */
+    align-items:center;
+    display: none;
+}
+footer p{
+    color: white;
+    margin-left: 2vw;
+}
+body{
+    overflow-x: hidden;
+}
