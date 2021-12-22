@@ -45,16 +45,20 @@ clickedDiv.addEventListener("mouseenter", () => {
     wannaOffCategory()
     wannaOffProfilePage()
 })
-for (let btns of homePageBtn) {
-    btns.addEventListener("click", () => {
-        wannaDisableAll()
-        let dropd = document.querySelector(".dropDown")
-        if (window.getComputedStyle(dropd).display !== "none") {
-            dropd.style.display = "none"
-            document.querySelector(".logo").style.display = "flex"
-        }
-    })
-}
+
+
+homePageBtn[1].addEventListener("click", () => {
+    wannaDisableAll()
+})
+homePageBtn[0].addEventListener("click", () => {
+    let dropd = document.querySelector(".dropDown")
+    if (window.getComputedStyle(dropd).display !== "none") {
+        dropd.style.display = "none"
+        document.querySelector(".logo").style.display = "flex"
+    }
+})
+
+
 connectCartBtn.addEventListener("click", () => {
     wannaDisableAll()
 })

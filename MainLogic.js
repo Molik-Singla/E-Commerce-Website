@@ -1150,27 +1150,7 @@ cancelProfilePage.addEventListener("click", function () {
     let a2 = document.querySelector(".insideProfile1")
     offEffect(a2)
 })
-// profilePageDiv.addEventListener("mouseleave", () => {
-//     backBtnOnProductItself.style.visibility = "visible"
-//     profilePageDiv.style.display = "none"
-//     maxBody()
-//     offFilter()
 
-//     offEffect(allHeader[2])
-//     if(whichPage[whichPage.length-1] == "HomePage"){
-//         onEffect(allHeader[1])
-//         offEffect(allHeader[3])
-//     }
-//     else if(whichPage[whichPage.length-1] == "CartItself"){
-//         onEffect(allHeader[3])
-//         offEffect(allHeader[1])
-//     }
-//     else if(whichPage[whichPage.length-1] == "ProductsPage"){
-//         onEffect(cata)
-//     }
-//     let a2 = document.querySelector(".insideProfile1")
-//     offEffect(a2)
-// })
 // logout btn in profile
 logOutInProfile.addEventListener("click", function () {
     if (localStorage.getItem("isLogin") == "true") {

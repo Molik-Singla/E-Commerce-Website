@@ -14,6 +14,7 @@ function offEffect(on){
 }
 let headerBtns = document.querySelectorAll("header button")
 function switchToOnOff(on, ...off) {
+    let cataP = document.querySelector(".category>p")
     on.style.display = "flex"  
     whichPage.push(on.className)
     for (let oneOff of off) {
@@ -37,8 +38,7 @@ function switchToOnOff(on, ...off) {
         window.scrollTo(0 , 0)
     }
     else if(on.className === "ProductsPage"){
-        let cataP = document.querySelector(".category>p")
-        cataP.textContent = "Category"
+        // cataP.textContent = "Category"
         onEffect(cata)
         offEffect(headerBtns[1])
         offEffect(headerBtns[2])
