@@ -403,7 +403,7 @@ main{
     
 }
 .singleHomePageProduct:hover .productImg img{
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all .4s;
     transform: scale(1.1);
 }
@@ -681,6 +681,9 @@ main{
     grid-template-columns: .8fr 2fr .8fr .4fr;
     font-size: 16px;
     position: relative;
+}
+.singleSortedProduct:hover{
+    cursor: pointer !important;
 }
 .sortedProductImg{
     width: 100%;
@@ -1119,6 +1122,8 @@ tr > td:nth-of-type(1){
 .cartInform > p:nth-of-type(1){
     font-size: 1.6em;
     margin: 10px 0px 5px 0px;
+    height: 25px;
+    overflow-y: hidden;
 }
 .cartInform > p:nth-of-type(2){
     font-size: 1.1em;
@@ -1504,10 +1509,16 @@ section{
     top: 12%;
 }
 .profileInfoInside p{
-    font-size: 1.6em;
+    font-size: 1.2em;
     margin: 15px;
     margin-left: 30px;
     
+}
+.vaiseHi2{
+    font-size: 1.5em important;
+}
+.profilePage{
+    overflow: auto !important;
 }
 .profileInfoInside button{
     position: absolute;

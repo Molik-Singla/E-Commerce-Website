@@ -260,3 +260,9 @@
 }
 
 /* signup page responsive ends */
+
+@media screen and (min-width : 767px){
+    .profilePage{
+        min-width: 767px;
+    }
+}

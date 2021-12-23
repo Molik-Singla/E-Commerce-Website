@@ -1134,6 +1134,8 @@ profileBtn.addEventListener("click", () => {
 
 })
 profileBtn1.addEventListener("click", () => {
+    document.querySelectorAll(".profileInfoInside p")[0].style.fontSize = "1.5em"
+    document.querySelectorAll(".profileInfoInside p")[1].style.fontSize = "1.5em"
     profileFunc()
 })
 
@@ -1282,7 +1284,7 @@ function aboutUSFunc() {
     profilePageDiv.style.display = "flex"
 
     passwordInsideProfile.className = "vaiseHi"
-    passwordInsideProfile.innerHTML = `My name is Molik Singla . I am currently doing BCA at Public College Samana . Languages I know :- <br> C , C++ , Python , JavaScript`
+    passwordInsideProfile.innerHTML = `My name is Molik Singla and I am a full-time  web designer who specializes in creating dynamic and beautiful web pages. I have been in the field for nearly 4 months. Currently I am pursuing Bachelors in Computer Aplication.My skill set includes computer languages like c, c++, python and javascript. I've worked on many projects in web development and this site is a part of my learning journey. I hope you like it :) .`
 
     emailInsideProfile.className = "vaiseHi2"
     emailInsideProfile.textContent = "Hello , "
@@ -1294,6 +1296,8 @@ function aboutUSFunc() {
     offEffect(offOne)
 }
 aboutBtn.addEventListener("click", () => {
+    document.querySelectorAll(".profileInfoInside p")[0].style.fontSize = "1.5em"
+    document.querySelectorAll(".profileInfoInside p")[1].style.fontSize = "1.2em"
     wannaOffAreYouSureDiv()
     wannaOffCategory()
     wannaOffProfileName()

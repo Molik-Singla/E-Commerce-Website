@@ -106,10 +106,12 @@ pageLogin.addEventListener("mouseenter", () => {
 // for width <= 768px
 pageHome.addEventListener("touchstart", () => {
     wannaOffCategory()
-    let dropd = document.querySelector(".dropDown")
-    if (window.getComputedStyle(dropd).display !== "none") {
-        dropd.style.display = "none"
-        document.querySelector(".logo").style.display = "flex"
+    if (window.innerWidth <= 767) {
+        let dropd = document.querySelector(".dropDown")
+        if (window.getComputedStyle(dropd).display !== "none") {
+            dropd.style.display = "none"
+            document.querySelector(".logo").style.display = "flex"
+        }
     }
 })
 pageProduct.addEventListener("touchstart", () => {
@@ -120,27 +122,35 @@ pageProductItself.addEventListener("touchstart", () => {
 })
 pageCart.addEventListener("touchstart", () => {
     wannaOffCategory()
-    let dropd = document.querySelector(".dropDown")
-    if (window.getComputedStyle(dropd).display !== "none") {
-        dropd.style.display = "none"
-        document.querySelector(".logo").style.display = "flex"
-    }
-})
-pageLogin.addEventListener("touchstart", () => {
-    wannaDisableAll()
-    let dropd = document.querySelector(".dropDown")
-    if (window.getComputedStyle(dropd).display !== "none") {
-        dropd.style.display = "none"
-        document.querySelector(".logo").style.display = "flex"
-    }
-})
-for (let i = 0; i < 2; i++) {
-    loginSinginPageBtn[i].addEventListener("touchstart", () => {
-        wannaDisableAll()
+    if (window.innerWidth <= 767) {
         let dropd = document.querySelector(".dropDown")
         if (window.getComputedStyle(dropd).display !== "none") {
             dropd.style.display = "none"
             document.querySelector(".logo").style.display = "flex"
+        }
+    }
+})
+pageLogin.addEventListener("touchstart", () => {
+    wannaDisableAll()
+    if (window.innerWidth <= 767) {
+        let dropd = document.querySelector(".dropDown")
+        if (window.getComputedStyle(dropd).display !== "none") {
+            dropd.style.display = "none"
+            document.querySelector(".logo").style.display = "flex"
+        }
+    }
+})
+for (let i = 0; i < 2; i++) {
+    loginSinginPageBtn[i].addEventListener("touchstart", () => {
+        wannaOffAreYouSureDiv()
+        wannaOffCategory()
+        wannaOffProfilePage()
+        if (window.innerWidth <= 767) {
+            let dropd = document.querySelector(".dropDown")
+            if (window.getComputedStyle(dropd).display !== "none") {
+                dropd.style.display = "none"
+                document.querySelector(".logo").style.display = "flex"
+            }
         }
     })
 }
@@ -156,5 +166,9 @@ menuIcon.addEventListener("touchend", () => {
     }
     wannaDisableAll()
 })
-
+profileBtn1.addEventListener("click", () => {
+    wannaOffAreYouSureDiv()
+    wannaOffProfileName()
+    wannaOffCategory()
+})
 // END...

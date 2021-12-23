@@ -23,7 +23,7 @@
         width: 148px;
     }
 }
-@media screen and (max-width : 768px){
+@media screen and (max-width : 767px){
     :root{
         --header-height : 51px !important;
     }
@@ -35,7 +35,7 @@
     }
 }
 
-@media screen and (min-width : 768px){
+@media screen and (min-width : 767px){
     .insideProductPage{
         margin-top: 10px;
     }
@@ -61,7 +61,7 @@
 
 
 /* make product page responsive for mobile */
-@media screen and (max-width : 768px){
+@media screen and (max-width : 767px){
     .someWrong{
         top: 55px;
         left: 27%;
@@ -234,7 +234,7 @@
         width: 150px;
     }
 }
-@media screen and (max-width : 768px){
+@media screen and (max-width : 767px){
     .signLoginBtns2 button {
         background-color: #F7CA00;
     }
@@ -295,7 +295,7 @@
 }
 
 /* profile page rewposdjsld */
-@media screen and (max-width : 768px){
+@media screen and (max-width : 767px){
     main{
         padding-top: 51px;
     }
